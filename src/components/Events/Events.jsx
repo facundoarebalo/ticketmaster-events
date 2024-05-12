@@ -5,7 +5,7 @@ import useEventsData from "../../hooks/useEventsData"
 
 const Events = ({ searchTerm }) => {
 
-    const { events } = useEventsData()
+    const { events, isLoading, error } = useEventsData()
 
     const handleEventItemClick = (id) => {
         console.log('evento clickeado', id)
@@ -28,6 +28,12 @@ const Events = ({ searchTerm }) => {
                 id={eventItem.id}
             />
         ));
+    }
+    if(error){
+        return <div>Error</div>
+    }
+    if(isLoading){
+        return <div>Cargando...</div>
     }
 
 
