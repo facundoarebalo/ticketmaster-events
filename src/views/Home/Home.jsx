@@ -44,6 +44,7 @@ const Home = () => {
             previousClassName={styles.previous}
             pageClassName={styles.page}
             activeClassName={styles.activePage}
+            disabledClassName={styles.disabledPage}
                 breakLabel="..."
                 nextLabel=">"
                 onPageChange={handlePageClick}
