@@ -9,12 +9,12 @@ const EventItem = ({ info, id, name, image, onEventClick }) => {
 
 
   return (
-    <div className='event-item-container'>
+    <div className={styles.eventItemContainer}>
       <img src={image} alt={name} width={200} height={200} />
-      <div className='event-info-container'>
-      <h4 className='event-name'>{name}</h4>
-      <p className='event-info'>{info}</p>
-      <button className='see-more-button' onClick={handleSeeMoreClick} >Ver más</button>
+      <div className={styles.eventInfoContainer}>
+      <h4 className={styles.eventName}>{name}</h4>
+      <p className={styles.eventInfo}>{info}</p>
+      <button className={styles.seeMoreButton} onClick={handleSeeMoreClick} >Ver más</button>
       </div>
 
     </div>
