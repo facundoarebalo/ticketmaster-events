@@ -2,11 +2,13 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { format } from "date-fns"
 import { es } from "date-fns/locale"
+import useEventResults from "../../state/event-results"
 import styles from './Detail.module.css'
 
 
 
 const Detail = () => {
+  const { data } = useEventResults()
   const { eventId } = useParams()
   const [eventData, setEventData] = useState({});
   const [error, setError] = useState({})
@@ -15,7 +17,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchEventData = async () => {
       try {
-        const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}?apikey=ZBOzG9jZAHHSllHXeI72pRLkaGCeK2AN`)
+        const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}?apikey=${import.meta.env.VITE_TICKETMASTER_API_KEY}`)
         const data = await response.json()
         setEventData(data)
 

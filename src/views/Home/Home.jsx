@@ -35,35 +35,30 @@ const Home = () => {
     }
 
     return (
-        <div>
-
-            <Events searchTerm={searchTerm} events={events} />
-            <ReactPaginate
-            className={styles.pagination}
-            nextclassName={styles.next}
-            previousClassName={styles.previous}
-            pageClassName={styles.page}
-            activeClassName={styles.activePage}
-            disabledClassName={styles.disabledPage}
-                breakLabel="..."
-                nextLabel=">"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={5}
-                pageCount={page.totalPages}
-                previousLabel="<"
-                renderOnZeroPageCount={null}
-            />
-
-        </div>
-    )
-
-
-    return (
         <>
             <Navbar onSearch={handleNavbarSearch} ref={containerRef} />
             {renderEvents()}
+            <div>
+                <Events searchTerm={searchTerm} events={events} />
+                <ReactPaginate
+                    className={styles.pagination}
+                    nextclassName={styles.next}
+                    previousClassName={styles.previous}
+                    pageClassName={styles.page}
+                    activeClassName={styles.activePage}
+                    disabledClassName={styles.disabledPage}
+                    breakLabel="..."
+                    nextLabel=">"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={5}
+                    pageCount={page.totalPages}
+                    previousLabel="<"
+                    renderOnZeroPageCount={null}
+                />
+            </div>
         </>
     )
+
 }
 
 export default Home

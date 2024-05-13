@@ -1,51 +1,49 @@
 .container {
-
 }
 
 .mainInfoContainer {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .eventImage {
-    width: 100%;
-    min-height: 75vh;
-    object-fit: cover;
+  width: 100%;
+  min-height: 75vh;
+  object-fit: cover;
 }
 
-.eventName{
-    margin: 12px 0;
-    font-size: 28px;
+.eventName {
+  margin: 12px 0;
+  font-size: 28px;
 }
 
 .eventInfo {
-    text-align: left;
-    margin: 4px 0;
+  text-align: left;
+  margin: 4px 0;
 }
 
 .dateInfo {
-    margin: 4px 0;
+  margin: 4px 0;
 }
 
 .seatInfoContainer {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 12px;
 }
 
 .seatMapTitle {
-    margin: 6px 0;
-    font-size: 16px;
+  margin: 6px 0;
+  font-size: 16px;
 }
 
 .pleaseNote {
-    text-align: left;
-    margin: 10px 0;
+  text-align: left;
+  margin: 10px 0;
 }
 
 .priceRanges {
-    margin: 0;
+  margin: 0;
 }
