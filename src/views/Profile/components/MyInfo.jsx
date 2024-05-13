@@ -19,7 +19,7 @@ setValue('edad', userData?.edad)
 } catch (error) {
     
 }
-    },[])
+    },[setValue])
 
     const handleFormSubmit = (data) => {
         try {
